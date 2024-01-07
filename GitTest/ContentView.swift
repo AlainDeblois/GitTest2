@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isPresented: Bool = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            Button("Show modal") {
+                isPresented = true
+            }.sheet(isPresented: $isPresented) {
+                    Text("This is the modal screen")
+                }
         }
-        .padding()
     }
 }
 
