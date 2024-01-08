@@ -15,7 +15,7 @@ struct ContentView: View {
                 ModalView()
             }, label: {
                 Text("Go to Modal view")
-            }).foregroundStyle(.green)
+            }).foregroundStyle(.purple)
             .navigationTitle("Git Testing")
         }
     }
